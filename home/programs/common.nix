@@ -22,6 +22,7 @@
     gawk
     zstd
     gnupg
+    vscode
 
     # nix related
     #
