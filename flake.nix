@@ -8,8 +8,6 @@
    };
    
    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-
-   helix.url = "github:helix-editor/helix/23.05";
    
  };
  outputs = {self, nixpkgs, home-manager, nix-vscode-extensions, ...} @inputs: {
