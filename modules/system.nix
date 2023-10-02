@@ -5,17 +5,6 @@
 { config, pkgs, helix, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-  boot.loader.systemd-boot.configurationLimit = 10;
-
   # Perform gc weekly
   nix.gc = {
     automatic = true;
@@ -26,15 +15,7 @@
   # Auto optimise
   nix.settings.auto-optimise-store = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Moncton";
@@ -52,8 +33,6 @@
     xkbVariant = "";
   };
   
-  # Enable vmware tools
-  virtualisation.vmware.guest.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mstpierre = {
@@ -76,7 +55,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
-    helix.packages."${pkgs.system}".helix
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     curl
