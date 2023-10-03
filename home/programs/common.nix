@@ -4,6 +4,7 @@
     # feel free to add your own or remove some of them
 
     helix
+    emacs
     # networking tool
     iperf3
     dnsutils  # `dig` + `nslookup`
