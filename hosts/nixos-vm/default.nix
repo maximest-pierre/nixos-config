@@ -25,6 +25,10 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  # Spotify and google cast firewall
+  networking.firewall.allowedTCPPorts = [ 57621 ];
+  networking.firewall.allowedUDPPorts = [ 5353 ];
   
   system.stateVersion = "23.05";
 }
