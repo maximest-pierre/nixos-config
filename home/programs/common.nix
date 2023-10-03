@@ -12,6 +12,7 @@
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
     ipcalc  # it is a calculator for the IPv4/v6 addresses
+    nmap
 
     # misc
     cowsay
